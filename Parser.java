@@ -54,6 +54,7 @@ public class Parser extends AppCompatActivity {
             JSONArray jsonMainNode = jsonResponse.optJSONArray("products");
             for (int i = 0; i < jsonMainNode.length(); i++) {
                 JSONObject jsonChildNode = jsonMainNode.getJSONObject(i);
+<<<<<<< HEAD
                 JSONArray NameNode = jsonChildNode.optJSONArray("name"); // Parsing the "name" node
                 JSONObject NameObject = NameNode.getJSONObject(0);       // to extract the "value"
                 String name = NameObject.optString("value");            // from the node's element
@@ -73,12 +74,23 @@ public class Parser extends AppCompatActivity {
                 description_short=description_short.replaceAll("<p>","");
                 description_short=description_short.replaceAll("</p>","");
                 if (description_short.isEmpty()) description_short=description;
+=======
+                String name = jsonChildNode.optString("name");
+                Integer id_product = jsonChildNode.optInt("id");
+                Integer id_image = jsonChildNode.optInt("id_default_image");
+                String description_short = jsonChildNode.optString("description_short");
+                String description = jsonChildNode.optString("description");
+>>>>>>> 13868191e50b854bb4208d0807704e449c95984f
                 Double price = jsonChildNode.optDouble("price");
                 String id_supplier = jsonChildNode.optString("id_supplier");
                 String reference = jsonChildNode.optString("reference");
                 String activo= ""+jsonChildNode.optString("active");
                 if(activo.equalsIgnoreCase("1"))
+<<<<<<< HEAD
                     activo="Yes";
+=======
+                    activo="Sí";
+>>>>>>> 13868191e50b854bb4208d0807704e449c95984f
                 else
                     activo="No";
                 String available = jsonChildNode.optString("available_now");
