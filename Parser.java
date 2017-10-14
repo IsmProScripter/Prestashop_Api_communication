@@ -24,11 +24,11 @@ import java.util.List;
 import java.util.Map;
 import java.util.concurrent.ExecutionException;
 
-public class call_listProducts extends AppCompatActivity {
+public class Parser extends AppCompatActivity {
 
     ListView lv;
     String jsonResult;
-    String url = "http://tpawluuaronnt2.one/prestashop/prestashop/api/products&output_format=JSON&display=full";
+    String url = "http://MyWebSite.com/api/products&output_format=JSON&display=full";
     String prestashop_key = "RM6FQ7HBHV654CC82SEFUI18ZHX5FAPU";
 
 
